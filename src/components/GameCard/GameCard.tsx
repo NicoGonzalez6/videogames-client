@@ -51,7 +51,6 @@ export const GameCard: React.FC<IgameCard> = ({
 
 const StyledGameCard = styled.div`
   a {
-    width: 100%;
     background-color: ${({ theme }) => theme.colors.secondary};
     border-radius: ${({ theme }) => theme.radiusses.md};
     padding: ${({ theme }) => theme.spacing.md};
@@ -62,10 +61,7 @@ const StyledGameCard = styled.div`
     flex-direction: column;
     cursor: pointer;
     padding-bottom: 20px;
-
-    @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-      max-width: 250px;
-    }
+    width: 240px;
 
     .img-container {
       width: 100%;
