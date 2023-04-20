@@ -73,6 +73,11 @@ export const Home: React.FC = () => {
             Search
           </Button>
         </FormContainer>
+        {games?.length == 0 && (
+          <TitleContainer>
+            <Text textType="subtitle">No game found</Text>
+          </TitleContainer>
+        )}
         {isLoading ? (
           <GamesContainer>
             <TitleContainer>
@@ -86,8 +91,9 @@ export const Home: React.FC = () => {
             })}
           </GamesContainer>
         )}
+
         <PaginatorContainer>
-          {games && (
+          {games && games.length >= 1 && (
             <ReactPaginate
               pageCount={totalPages as number}
               pageRangeDisplayed={totalPages as number}
