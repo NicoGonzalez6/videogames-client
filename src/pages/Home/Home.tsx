@@ -74,9 +74,11 @@ export const Home: React.FC = () => {
           </Button>
         </FormContainer>
         {isLoading ? (
-          <TitleContainer>
-            <Text textType="subtitle">Loading...</Text>
-          </TitleContainer>
+          <GamesContainer>
+            <TitleContainer>
+              <Text textType="subtitle">Loading...</Text>
+            </TitleContainer>
+          </GamesContainer>
         ) : (
           <GamesContainer>
             {games?.map((game: Igame) => {
