@@ -128,7 +128,7 @@ const GamesContainer = styled.div`
   width: 100%;
   flex-wrap: wrap;
   gap: ${({ theme }) => theme.spacing.xlg};
-  min-height: 500px;
+  min-height: 650px;
 `;
 
 const PaginatorContainer = styled.div`
